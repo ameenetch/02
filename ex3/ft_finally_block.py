@@ -1,17 +1,17 @@
-def water_plants(plant_list : list)->None:
+def water_plants(plant_list: list) -> None:
     print("Opening watering system")
-    try :
+    try:
         for x in plant_list:
             x + ""
             print(f"Watering {x}")
-    except :
+    except:     # noqa: E722
         print(f"Error: Cannot water {x} - invalid plant!")
     finally:
         print("Closing watering system (cleanup)")
 
 
-def test_watering_system() :
-    lst = ["tomato","lettuce","carrot"]
+def test_watering_system():
+    lst = ["tomato", "lettuce", "carrot"]
     lst2 = ["tomato", None]
     print("=== Garden Watering System ===\n")
     print("Testing normal watering...")
@@ -23,4 +23,4 @@ def test_watering_system() :
     print("\nCleanup always happens, even with errors!")
 
 
-test_watering_system() 
+test_watering_system()
